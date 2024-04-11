@@ -1,5 +1,9 @@
 package extra;
 
+import java.awt.Color;
+
+import javax.swing.JFrame;
+
 import processing.core.PApplet;
 
 /*
@@ -39,21 +43,28 @@ import processing.core.PApplet;
  */
 public class _03_VisualArraySorter extends PApplet {
     static final int WIDTH = 600;
-    static final int HEIGHT = 400;
+    static final int HEIGHT = 600;
 
+    int[] uh;
+    JFrame guy = new JFrame();
     @Override
     public void settings() {
-        
+    guy.setSize(WIDTH, HEIGHT);
     }
 
     @Override
     public void setup() {
-        
+        uh = new int[50];
+        for(int i = 0;i<uh.length;i++) {
+        	uh[i] = (int)random(HEIGHT);
+        	noStroke();
+        }
     }
 
     @Override
     public void draw() {
-        
+    	guy.setBackground(Color.blue);
+    	
     }
 
     static public void main(String[] passedArgs) {
